@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function(){
+            var images=document.getElementsByClassName('lunbo');
+            var pos=0;
+            var len=images.length;
+            setInterval(function(){
+                images[pos].style.display='none';
+                pos=++pos==len?0:pos;
+                images[pos].style.display='inline';
+            },1000);
+        }
+    </script>
+</head>
+<style>
+    .a{
+        width: 100px;
+        color: #000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+ .lunbo1{
+        height: 150px;
+        overflow: hidden;;
+    }
+</style>
+<body>
+<div class="lunbo1">
+    <img class="lunbo" src="image/banner.png">
+    <img class="lunbo" src="image/banner0.png">
+    <img class="lunbo" src="image/banner1.png">
+</div>
+<p class="a">werwerewretertereffffffffffffffsdffffffffff</p>
+</body>
+</html>
